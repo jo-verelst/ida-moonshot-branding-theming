@@ -1,49 +1,494 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <title>Branding @ Signify</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/moonshot.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/night-owl.css">
 
-		<script src="js/reveal.js"></script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Branding / Theming</h1>
+                <div>@</div>
+                <img style="width: 40%;"
+                    src="https://www.signify.com/b-dam/signify/master/crsc/signify-logo-footer.png" />
+            </section>
+
+            <section>
+                <h2>Agenda</h2>
+                <ul>
+                    <li class="fragment">Pre-styleguide</li>
+                    <li class="fragment">Styleguide in design</li>
+                    <li class="fragment">Styleguide in code</li>
+                    <li class="fragment">Branding/Theming</li>
+                </ul>
+            </section>
+
+            <section class="pre-styleguide maiko" data-background-color="#1a2d3c">
+                <h2>Pre-styleguide</h2>
+                <img class="fragment" src="http://cf.broadsheet.ie/wp-content/uploads/2012/07/facts8.jpg">
+            </section>
+
+            <section class="pre-styleguide jo" data-background-color="#1a2d3c">
+                <h2>Pre-styleguide</h2>
+                <h3 class="fragment">No system</h3>
+                <ul>
+                    <li class="fragment">Low visual consistency</li>
+                    <li class="fragment">Unmanaged growth in styles <span class="fragment">(buttons, colors, margins,
+                            ...)</span></li>
+                    <li class="fragment">No one guarded the brand styling</li>
+                </ul>
+            </section>
+
+            <section class="pre-styleguide jo" data-background-color="#1a2d3c">
+                <section class="jo">
+                    <h2>"Look on my Works, ye Mighty, and despair!"</h2>
+                    <sub>"Ozymandias" by Percy Bysshe Shelley</sub>
+                </section>
+                <section class="jo">
+                    <pre>
+                        <code class="scss hljs" data-trim data-noescape>
+                            @grey1: #efeff4;
+                            @grey2: #e0e0e0;
+                            @grey3: #ccced8;
+                            @grey4: #b9bbc7;
+                            @grey5: #888b9c;
+                            @grey6: #5d6678;
+                            @grey7: #3c3c3c;
+                            @grey8: #666666;
+                            @grey9: #242e47;
+                            @grey10: #cccccc;
+                            @grey11: #999999;
+                            @grey12: #cccedb;
+                            @grey13: #333333;
+                            @grey14: #e3e1e1;
+                            @grey15: #e6e6e6;
+                            @grey16: #f7f7f9; // used in button-flyout.less
+                            @grey17: #3c3c3c; // used in forms.less
+                            @grey18: #c2c4cf; // used in icon.less
+                            @grey19: #eaeaed; // used in icon.less
+                            @grey20: #ececef; // used in icon.less
+                            ...
+                            </code>
+                        </pre>
+                </section>
+                <section class="jo">
+                    <pre>
+                        <code class="scss hljs" data-trim data-noescape>        
+                            @grey21: #e7e7e7; // used in live-chat.less
+                            @grey22: #a9acba; // used in live-chat.less
+                            @grey23: #d8d8d8; // used in live-chat.less
+                            @grey24: #cfd0d4; // used in live-chat.less
+                            @grey25: #3f3f3f; // used in magnific-popup.less
+                            @grey26: #444444; // used in magnific-popup.less
+                            @grey27: #bdbdbd; // used in magnific-popup.less
+                            @grey28: #f3f3f3; // used in magnific-popup.less
+                            @grey29: #dadada; // used in popup.less (@popup-gradient-1)
+                            @grey30: #f2f2f2; // used in popup.less (@popup-gradient-2)
+                            @grey31: #bbbbbb; // used in popup.less (@popup-content-ie8)
+                            @grey32: #252525; // used in rangeslider.less
+                            @grey33: #cdddbc; // used in rate.less
+                            @grey34: #888888; // used in tooltip.less
+                            @grey35: #c1c3ce; // used in video-no-fullscreen.less
+                            @grey36: #eeeef0; // used in button-flyout.less
+                            @grey37: #fcfcfc; // used in thumbstrip.less
+                            @grey38: #2f2f2f; // latest grey color coming from Philips Design
+                            @grey39: #f5f4f4;
+                            @grey40: #a6a6a6; // dark grey for filter used in d77v2-product-finder-for-category.less
+                        </code>
+                    </pre>
+                </section>
+                <section class="jo">
+                    <pre>
+                        <code class="scss hljs" data-trim data-noescape>
+                            // COLORS
+                            @blue1: #72b5cc;
+                            @blue2: #0089c4;
+                            @blue3: #005a8b;
+                            @blue4: #0039a6;
+                            @blue5: #0b2265;
+                            @blue6: #d3deed;  // (very very light color)
+                            @blue7: #b3c8e6;  // VERY LIGHT blue
+                            @blue8: #7ba4d9;  // LIGHT blue
+                            @blue9: #0066a1;  // BRIGHT blue
+                            @blue10: #003478; // DARK blue
+                            @blue11: #0f204b; // VERY DARK blue
+                            @blue12: #09142e;
+                            @blue13: #d9edf6; // used in accordion.less (@accordion-background), box.less (@box-lightcolored-background)
+                            // @blue14 - no longer used
+                            @blue15: #003FA5; // used in buttons.less (@button-border)
+                            @blue16: #0449B4; // used in buttons.less (@button-border-left)
+                            @blue17: #568FE4; // used in buttons.less (@button-shadow)
+                            // @blue18 - no longer used
+                            @blue19: #000034; // used in controls.less
+                            @blue20: #86afeb; // used in forms.less (@form-border-focus)
+                        </code>
+                    </pre>
+                </section>
+                <section class="jo">
+                    <pre>
+
+                        <code class="scss hljs" data-trim data-noescape>        
+                            @blue21: #0073b4; // used in icons.less (@icon-wrapper-hover)
+                            @blue22: #0e5fd8; // used in live-chat.less (@live-chat-name)
+                            @blue23: #9298A2; // used in video.less (@video-mute-background)
+                            @blue24: #0b5ed7; // used in promotions.less (@promotion-retour)
+                            @blue25: #bec0ca; // used in thumbstrip.less (@thumbstrip-overflow-background)
+                            @blue26: #f2f9fc; // used in checkbox.less
+                            @blue27: #80b3d0; // used in checkbox.less
+                            @blue28: #d9edf6; // used as hover in sticky nav
+                            ...
+                        </code>
+                    </pre>
+                    <div class="fragment">This goes on...</div>
+                    <div class="fragment">for <strong>600</strong> more lines...</div>
+                </section>
+                <section class="jo">
+                    <img style="width: 800px;" src="https://media.giphy.com/media/uK42lT3ccsr84/source.gif" />
+                </section>
+            </section>
+
+            <section class="pre-styleguide jo" data-background-color="#1a2d3c">
+                <h3>Leads to undescriptive, unclear code</h3>
+                <pre>
+                    <code data-trim data-noescape data-line-numbers="3, 6">
+                        &.p-empty {
+                            .p-product-title{
+                                background-color: @color13;
+                                padding: 10px 0 0;
+                                font-size: 12px;
+                                color: @grey5;
+                            }
+                        }
+                    </code>
+                </pre>
+            </section>
+
+            <section class="styleguide-in-design maiko" data-background-color="#023259">
+                <section class="maiko">
+                    <h2>Styleguide in design</h2>
+                    <ul>
+                        <li class="fragment">Start of 2018: Zeplin <img src="https://zeplin.io/img/favicon/256x256.png"
+                                style="height: 42px; margin: 0 20px;" /></li>
+                        <li class="fragment">Start of 2019: conversion to Confluence</li>
+                    </ul>
+                </section>
+                <section class="maiko">
+                    <img src="https://zeplin.io/img/favicon/256x256.png" style="height: 150px; " />
+                    <h3><a href="https://app.zeplin.io/project/5accbc42068061ba30bbd4a1/dashboard"
+                            target="_blank">Zeplin</a></h3>
+                </section>
+                <section class="maiko">
+                    <img src="https://seeklogo.com/images/C/confluence-logo-D9B07137C2-seeklogo.com.png"
+                        style="height: 150px; " />
+                    <h3><a href="https://www.collaboration.dtf.lighting.com/display/HUEX/_modular-approach"
+                            target="_blank">Confluence</a></h3>
+                            <a href="https://signify.invisionapp.com/d/main/#/console/17876811/385654189/inspect" target="_blank">Invision</a>
+                </section>
+            </section>
+
+            <section class="styleguide-in-design maiko" data-background-color="#023259">
+                <section class="maiko">
+                    <h2>Styleguide in design</h2>
+                    <h3>Advantages</h3>
+                    <ul>
+                        <li class="fragment">Consistency</li>
+                        <li class="fragment">Clarity in design & development</li>
+                        <li class="fragment">Maintainability increases</li>
+                        <li class="fragment">A lot less complex</li>
+                    </ul>
+                </section>
+                <section class="maiko">
+                    <h3>Disadvantages</h3>
+                    <ul>
+                        <li class="fragment">Guarding complexity requires discipline!</li>
+                        <li class="fragment">Normalizing loose pixel values</li>
+                        <li class="fragment">A sense of ownership needed</li>
+                    </ul>
+                </section>
+                <section class="maiko">
+                    <h3>Resonsponsive spacings ?</h3>
+                    <img src="img/responsive-spacings.png" />
+                </section>
+            </section>
+
+            <section class="styleguide-in-code jo" data-background-color="#011627">
+                <h2>Styleguide in code</h2>
+            </section>
+
+            <section class="styleguide-in-code jo" data-background-color="#011627">
+                <h2>Styleguide in code</h2>
+                <h5>Disclaimer</h5>
+                <div class="fragment">
+                    <h3>This is <strong style="color: deeppink">A</strong> way</h3>
+                </div>
+                <div class="fragment">
+                    <h3>Not <strong style="color: deeppink">THE</strong> way</h3>
+                </div>
+            </section>
+
+            <section class="styleguide-in-code jo" data-background-color="#011627">
+                <h2>Styleguide in code</h2>
+                <div class="fragment">From static class list to dynamically generated</div>
+                <br>
+                <span class="fragment inline-images">From <img src="http://lesscss.org/public/img/less_logo.png" /> to
+                    <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" /></span>
+            </section>
+
+            <section class="styleguide-in-code jo" data-background-color="#011627">
+                <h2>Styleguide in code</h2>
+                <div style="display: flex; justify-content: center;" class="inline-images">Why <img
+                        src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" /> ?</div>
+                <ul>
+                    <li class="fragment">Locked on an old version of LESS (1.4)</li>
+                    <li class="fragment">Most popular begining of 2018</li>
+                    <li class="fragment">Out-of-the-box sensible methods <span class="fragment"><br>(mixins, functions,
+                            lists)</span></li>
+                    <li class="fragment">More stackoverflow articles/examples</li>
+                    <li class="fragment">Documentation clearer</li>
+                </ul>
+
+            </section>
+
+            <section class="styleguide-in-code jo" data-background-color="#011627">
+                <h2>Styleguide in code</h2>
+                <div style="display: flex; justify-content: center;" class="inline-images"><img
+                        src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" /> popularity</div>
+                <div class="fragment">
+                    <img src="img/sass-vs-less.png" />
+                    <sub>(2019.stateofcss.com)</sub>
+                </div>
+            </section>
+
+            <section class="styleguide-in-code jo" data-background-color="#011627">
+                <h2>Styleguide in code</h2>
+                <ul>
+                    <li class="fragment">Generated styleguide</li>
+                    <li class="fragment">Styleguide sections <span class="fragment"><br>(typography, fonts, spacings,
+                            links, ...)</span></li>
+                    <li class="fragment">"Root, factory, variables" pattern</li>
+                    <li class="fragment">Webpack postcss plugins: autoprefixer en cssnano</li>
+                </ul>
+            </section>
+
+            <section class="styleguide-in-code maiko" data-background-color="#011627">
+                <section class="maiko">
+                    <h2>"Root, factory, variables"</h2>
+                    <div>Structuur:</div>
+                    <img src="img/shadow-directory.png" />
+                </section>
+                <section class="maiko">
+                    <h3>Variables</h3>
+                    <pre>
+                        <code style="font-size: 62%;" class="scss hljs" data-trim data-noescape>
+                            // _shadows-variables.css
+                            @import '../color/color-variables';
+
+                            $shadows: (
+                                shadow-0: none,
+                                shadow-1: (0 4px 8px 0 #{rgba($ui-color-shadow-black, .16)}, 0 1px 2px 0 #{rgba($ui-color-shadow-black, .32)}),
+                                shadow-2: (0 6px 12px 0 #{rgba($ui-color-shadow-black, .24)}, 0 1.5px 3px 0 #{rgba($ui-color-shadow-black, .32)}),
+                            ) <mark class="fragment">!default;</mark>
+                        </code>
+                    </pre>
+                    <ul>
+                        <li class="fragment">In SCSS maps, so dynamic amount</li>
+                        <li class="fragment"><code>!default</code>: overwritable at any point</li>
+                    </ul>
+                </section>
+                <section class="maiko">
+                    <h3>Variables</h3>
+                    <pre>
+                        <code class="scss hljs" data-trim data-noescape>
+                            // Cardinality            // t-shirt sizes
+                            $shadows: (               $shadows: (
+                                shadow-0: ...,            shadow-xs: ...,
+                                shadow-1: ...,            shadow-s:  ...,
+                                shadow-2: ...,            shadow-m:  ...,
+                                shadow-3: ...,            shadow-l:  ...,
+                                shadow-4: ...,            shadow-xl:  ...,
+                                shadow-5: ...,            shadow-xxl: ...,
+                                shadow-6: ...,            shadow-xxxl: ...,
+                                shadow-7: ...,            shadow-xxxxl: ...,
+                            ) !default;
+                        </code>
+                    </pre>
+                    <ul>
+                        <li class="fragment">Cardinality over T-Shirt sizes because of longer lists</li>
+                        <li class="fragment">Refactors are painful in any case</li>
+                    </ul>
+                </section>
+                <section class="maiko">
+                    <h3>Factory</h3>
+                    <pre>
+                        <code class="scss hljs" data-trim data-noescape>
+                            // _shadow-factory.css
+                            @import 'shadow-variables';
+
+                            @mixin generate-shadow($shadow-level) {
+                                box-shadow: map-get($shadows, $shadow-level);
+                            }
+                        </code>
+                    </pre>
+                    <ul>
+                        <li class="fragment">Safe to import anywhere</li>
+                        <li class="fragment">Needs to be kept <strong>simple</strong></li>
+                        <li class="fragment">Fully parameterized</li>
+                    </ul>
+                </section>
+                <section class="maiko">
+                    <h3>Root</h3>
+                    <pre>
+                        <code class="scss hljs" data-trim data-noescape>
+                            @import 'shadow-variables';
+                            @import 'shadow-factory';
+
+                            @each $shadow-level, $shadow-values in $shadows {
+                                .#{$shadow-level} {
+                                    @include generate-shadow($shadow-level);
+                                }
+                            }
+                        </code>
+                    </pre>
+                    <ul>
+                        <li class="fragment">Loops the variable lists</li>
+                        <li class="fragment">Produces the actual CSS</li>
+                        <li class="fragment">Included by the styleguide</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section class="styleguide-in-code jo" data-background-color="#011627">
+                <h2>Styleguide in code</h2>
+                Code deep dive
+            </section>
+
+            <section class="branding-theming maiko" data-background-color="#034072">
+                <h2>Branding/Theming</h2>
+            </section>
+
+            <section class="branding-theming maiko" data-background-color="#034072">
+                <section class="maiko">
+                    <h2>Branding/Theming</h2>
+                    <h3>Terminology (@hue)</h3>
+                </section>
+                <section class="maiko">
+                    <h4>Root styleguide</h4>
+                    <ul>
+                        <li class="fragment">is kept <strong>simple</strong></li>
+                        <li class="fragment">handles only the basics</li>
+                    </ul>
+                </section>
+                <section class="maiko">
+                    <h4>Brand</h4>
+                    <ul>
+                        <li class="fragment">tied to domain: meethue.com</li>
+                        <li class="fragment">overwrites mainly variable files</li>
+                    </ul>
+                    <br><br>
+                    <div class="logo-bar fragment">
+                        <img src="https://www.signify.com/b-dam/signify/master/crsc/signify-logo-footer.png" />
+                        <img src="https://static.webshopapp.com/shops/062485/files/178118816/hue-logo.png" />
+                        <img src="https://www.pilahorti.ru/b-dam/b2c/ru_RU/microsites/pilahorti/Pila-wordmark2.png" />
+                    </div>
+                    <div class="logo-bar fragment">
+                        <img src="https://www.interact-lighting.com/content/dam/b2b-li/en_AA/interact/interact_logo.png" />
+                        <img src="https://www.colorkinetics.com/b-dam/color-kinetics/crsc/ck-logo-header.png" />
+                        <img src="https://www.supermodular.com/images/layout/logo_new.png" />
+                    </div>
+                </section>
+                <section class="maiko">
+                    <h4>Theme</h4>
+                    <ul>
+                        <li class="fragment">on page level</li>
+                        <li class="fragment">on section level</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section class="branding-theming maiko" data-background-color="#034072">
+                <h2>Branding/Theming</h2>
+                Code deep dive + Demo!
+            </section>
+
+            <section class="glows" data-background-color="#000000">
+                <section class="jo">
+                    <h2>Oh, and 1 more thing...</h2>
+                </section>
+                <section class="jo">
+                    <h2>Glows!</h2>
+                    <img src="img/glow-definitions.png" />
+                </section>
+                <section class="jo" data-background-color="#000000">
+                    <div class="demo-glow">
+                        <h1><a href="http://localhost:8080/" target="_blank">Demo</a></h1>
+                    </div>
+                </section>
+            </section>
+
+            <section
+                data-background-image="https://vignette.wikia.nocookie.net/looneytunes/images/e/e1/All.jpg/revision/latest?cb=20150313020828">
+                <br><br><br><br><br><br><br><br><br><br>
+                <h1 class="fragment">Questions ?</h1>
+            </section>
+
+        </div>
+
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            history: true,
+            width: 1280,
+            dependencies: [{
+                src: 'plugin/markdown/marked.js'
+            }, {
+                src: 'plugin/markdown/markdown.js'
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true
+            }]
+        });
+        Reveal.addEventListener('slidechanged', function(event) {
+            const body = document.body;
+            body.classList.remove('jo');
+            body.classList.remove('maiko');
+            if(event.currentSlide.classList.contains('jo')) {
+                body.classList.add('jo');
+            } else if(event.currentSlide.classList.contains('maiko')) {
+                body.classList.add('maiko');
+            }
+        });
+    </script>
+</body>
+
 </html>
